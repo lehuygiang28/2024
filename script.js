@@ -64,7 +64,7 @@ let particlePool = [];
 let particles = new DoublyLinkedList();
 
 // Maximum number of fireworks
-const maxFireworks = 50;
+const maxFireworks = 5;
 let currentFireworks = 0;
 
 class Particle {
@@ -79,21 +79,21 @@ class Particle {
   }
 
   draw() {
-    const gradient = ctx.createRadialGradient(
-      this.x,
-      this.y,
-      0,
-      this.x,
-      this.y,
-      this.size
-    );
+    // const gradient = ctx.createRadialGradient(
+    //   this.x,
+    //   this.y,
+    //   0,
+    //   this.x,
+    //   this.y,
+    //   this.size
+    // );
     ctx.save();
     ctx.globalAlpha = this.alpha;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    gradient.addColorStop(0, this.color);
-    gradient.addColorStop(1, "rgba(0,0,0,0)");
-    ctx.fillStyle = gradient;
+    // gradient.addColorStop(0, this.color);
+    // gradient.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = this.color; // Use a solid color instead of a gradient
     ctx.fill();
     ctx.restore();
   }
