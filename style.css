@@ -56,3 +56,15 @@ canvas {
     background-color: yellow;
   }
 }
+
+/* Responsive CSS */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}

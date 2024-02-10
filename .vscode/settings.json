@@ -3,6 +3,7 @@
         "Giaang"
     ],
     "conventionalCommits.scopes": [
-        "page"
+        "page",
+        "responsive"
     ]
 }

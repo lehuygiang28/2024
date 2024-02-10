@@ -4,6 +4,18 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Function to update canvas size
+function updateCanvasSize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+// Update canvas size initially
+updateCanvasSize();
+
+// Update canvas size whenever the window is resized
+window.addEventListener("resize", updateCanvasSize);
+
 class Particle {
   constructor(x, y, color, velocity) {
     this.x = x;
