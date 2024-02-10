@@ -4,6 +4,7 @@
     ],
     "conventionalCommits.scopes": [
         "page",
-        "responsive"
+        "responsive",
+        "font"
     ]
 }
