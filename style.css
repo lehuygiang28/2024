@@ -1,0 +1,58 @@
+body {
+  animation: bg-color-change 10s infinite;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  animation: color-change 2s infinite;
+  font-size: 3em;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@keyframes color-change {
+  0% {
+    color: yellow;
+  }
+
+  50% {
+    color: orange;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@keyframes bg-color-change {
+  0% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: yellow;
+  }
+}
